@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Store.Entities.Enums;
 
 namespace Store.Entities
 {
@@ -19,6 +20,15 @@ namespace Store.Entities
             Name = name;
             Email = email;
             BirthDate = birthDate;
+        }
+
+        public override string ToString()
+        {
+            return Name
+    + ", ("
+    + BirthDate.ToString("dd/MM/yyyy")
+    + ") - "
+    + Email;
         }
     }
 }
